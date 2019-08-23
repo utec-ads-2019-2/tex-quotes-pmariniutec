@@ -1,7 +1,16 @@
-#include <iostream>
+#include <cstdio>
 
-using namespace std;
+int main() {
+  char ch;
+  long int count = 0;
 
-int main(int argc, char *argv[]) {
-    return 0;
+  while(scanf("%c", &ch) == 1) {
+	if(ch == '"') {
+	  count++;
+	  if(count % 2 == 1) printf("``");
+	  else printf("''");
+	} else {
+	  printf("%c", ch);
+	}
+  }
 }
